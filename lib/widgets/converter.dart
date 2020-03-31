@@ -59,43 +59,19 @@ class _ConverterState extends State<Converter> {
                         color:
                             Color(int.parse("#FF5722".replaceAll('#', '0xff'))),
                         fontSize: 35))),
-            Row(children: <Widget>[
-              Expanded(
-                flex: 4,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: MaterialButton(
-                    color: Colors.blue,
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "1",
-                      style: new TextStyle(fontSize: 26.0, color: Colors.white),
-                    ),
-                    onPressed: () {
-                      _onPressed(1);
-                    },
-                  ),
-                ),
+            Expanded(
+              flex: 3,
+              child: SizedBox(
+                height: double.infinity,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                  _numberButton(1),
+                  Spacer(),
+                  _numberButton(0),
+                ]),
               ),
-              Spacer(),
-              Expanded(
-                flex: 4,
-                child: Padding(
-                   padding: const EdgeInsets.all(8.0),
-                                  child: MaterialButton(
-                    color: Colors.blue,
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "0",
-                      style: new TextStyle(fontSize: 26.0, color: Colors.white),
-                    ),
-                    onPressed: () {
-                      _onPressed(0);
-                    },
-                  ),
-                ),
-              ),
-            ]),
+            ),
             Expanded(
               flex: 1,
               child: Container(
@@ -113,6 +89,25 @@ class _ConverterState extends State<Converter> {
               ),
             ),
           ]),
+    );
+  }
+
+  Widget _numberButton(int number) {
+    return Expanded(
+      flex: 4,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: MaterialButton(
+            color: Colors.blue,
+            onPressed: () {
+              _onPressed(number);
+            },
+            child: Text(number.toString(),
+                style: new TextStyle(
+                  fontSize: 26.0,
+                  color: Colors.white,
+                ))),
+      ),
     );
   }
 }
