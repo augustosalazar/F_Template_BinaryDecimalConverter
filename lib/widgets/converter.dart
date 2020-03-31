@@ -37,7 +37,8 @@ class _ConverterState extends State<Converter> {
           children: <Widget>[
             Container(
                 alignment: Alignment.centerLeft,
-                child: Text("Binary -> Decimal")),
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Binary -> Decimal", style: TextStyle(color: Theme.of(context).accentColor))),
             Container(
                 padding: const EdgeInsets.all(8.0),
                 alignment: Alignment.centerRight,
@@ -46,8 +47,7 @@ class _ConverterState extends State<Converter> {
                   textAlign: TextAlign.right,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color:
-                          Color(int.parse("#FF5722".replaceAll('#', '0xff'))),
+                      color:Theme.of(context).accentColor,
                       fontSize: 35),
                 )),
             Container(
@@ -56,8 +56,7 @@ class _ConverterState extends State<Converter> {
                 child: Text('$_decimal',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color:
-                            Color(int.parse("#FF5722".replaceAll('#', '0xff'))),
+                        color: Theme.of(context).accentColor,
                         fontSize: 35))),
             Expanded(
               flex: 3,
@@ -77,7 +76,7 @@ class _ConverterState extends State<Converter> {
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 child: MaterialButton(
-                    color: Color(int.parse("#0069C0".replaceAll('#', '0xff'))),
+                    color: Theme.of(context).accentColor,
                     onPressed: () {
                       _onPressed(2);
                     },
@@ -98,7 +97,7 @@ class _ConverterState extends State<Converter> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: MaterialButton(
-            color: Colors.blue,
+            color: Theme.of(context).primaryColor,
             onPressed: () {
               _onPressed(number);
             },

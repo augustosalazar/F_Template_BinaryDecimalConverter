@@ -6,13 +6,14 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Class demo Converter',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+           primaryColor: Colors.purple,
+           accentColor: Colors.purpleAccent,
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text('Programación Móvil 2020'),
+              title: Text('Class demo Converter'),
             ),
             body: Center(child: Converter())));
   }
