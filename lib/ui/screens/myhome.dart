@@ -1,4 +1,4 @@
-import 'package:demo_app/widgets/converter.dart';
+import 'package:demo_app/ui/widgets/converter.dart';
 import 'package:flutter/material.dart';
 
 class MyHome extends StatelessWidget {
@@ -6,14 +6,14 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Converter',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text('Programación Móvil 2020'),
+              title: Text('Converter'),
             ),
-            body: Center(child: Converter())));
+            body: Center(child: ConverterScreen())));
   }
 }
