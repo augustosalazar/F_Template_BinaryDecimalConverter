@@ -12,7 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   testWidgets('Binary to decimal', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(MyHome());
 
     expect(find.text('0'), findsNWidgets(2));
     expect(find.byKey(Key("1")), findsOneWidget);
