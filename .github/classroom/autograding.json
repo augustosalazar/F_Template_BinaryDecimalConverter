@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Binary to decimal",
+      "setup": "",
+      "run": "flutter test test/widget_test.dart",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}
