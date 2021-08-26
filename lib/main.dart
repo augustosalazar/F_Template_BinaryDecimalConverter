@@ -1,4 +1,4 @@
-import 'package:demo_app/ui/screens/myhome.dart';
+import 'package:demo_app/ui/screens/my_app.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyHome());
+void main() => runApp(MyApp());

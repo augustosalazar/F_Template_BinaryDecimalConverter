@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ConverterScreen extends StatefulWidget {
+class BinaryToDecimal extends StatefulWidget {
   @override
-  _ConverterScreenState createState() => _ConverterScreenState();
+  _BinaryToDecimalState createState() => _BinaryToDecimalState();
 }
 
-class _ConverterScreenState extends State<ConverterScreen> {
+class _BinaryToDecimalState extends State<BinaryToDecimal> {
   String _binary = "11";
   String _decimal =
       "3"; // _decimal = int.parse(_binary, radix: 2).toRadixString(10);
@@ -18,9 +18,6 @@ class _ConverterScreenState extends State<ConverterScreen> {
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-                alignment: Alignment.centerLeft,
-                child: Text("Binary -> Decimal")),
             Container(
                 padding: const EdgeInsets.all(8.0),
                 alignment: Alignment.centerRight,
