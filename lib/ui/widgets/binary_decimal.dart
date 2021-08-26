@@ -32,14 +32,8 @@ class _BinaryToDecimalState extends State<BinaryToDecimal> {
                 )),
             Text("3"),
             Row(children: <Widget>[
-              MaterialButton(
-                child: Text("1"),
-                onPressed: () {},
-              ),
-              MaterialButton(
-                child: Text("0"),
-                onPressed: () {},
-              ),
+              keyNumber(1),
+              keyNumber(0),
             ]),
             Expanded(
               flex: 1,
@@ -56,6 +50,13 @@ class _BinaryToDecimalState extends State<BinaryToDecimal> {
               ),
             ),
           ]),
+    );
+  }
+
+  Widget keyNumber(number) {
+    return MaterialButton(
+      child: Text(number.toString()),
+      onPressed: () {},
     );
   }
 }
